@@ -1,0 +1,7 @@
+.list-scroll {
+      max-height: 300px; 
+      overflow-y:scroll;
+    }
+button {
+  width: 100px;
+}

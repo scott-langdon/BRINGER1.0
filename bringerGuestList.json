@@ -1,0 +1,42 @@
+{
+    "data": {
+        "title": "Guest List",
+        "guests": [
+            {
+              "name" : "Marty McFly",
+              "email": "martymcfly@gmail.com",
+              "status" : "Going",
+              "encourageCount" : 3,
+              "admin": false
+            },
+            {
+              "name" : "Doc Brown",
+              "email": "docbrown@gmail.com",
+              "status" : "Going",
+              "encourageCount": 2,
+              "admin": true
+            },
+            {
+              "name" : "Lorraine Baines",
+              "email": "lorrainebaines@gmail.com",
+              "status" : "Not Going",
+              "encourageCount": 4,
+              "admin": false
+            },
+            {
+              "name" : "George McFly",
+              "email": "georgemcfly@gmail.com",
+              "status" : "Going",
+              "encourageCount": 1,
+              "admin": false
+            },
+            {
+              "name" : "Biff Tannen",
+              "email": "bifftanne@gmail.com",
+              "status" : "Maybe",
+              "encourageCount": 0,
+              "admin": false 
+            }
+        ]
+    }
+}

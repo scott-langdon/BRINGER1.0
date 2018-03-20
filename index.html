@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BRINGER-APP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="bringer.js"></script>
+</head>
+<body>
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" id="homeBtn">BRINGER</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Settings</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class='container text-center mb-5'> <!-- EVENT DETAILS -->
+  <h1 id="marty" class='display-1 mt-5'>Marty's BBQ</h1>
+  <p class='lead'>33 N Moorpark Rd, Thousand Oaks, CA 91360</p>
+  <p class='lead'>Host:Doc Brown</p>
+  <h4 class='display-5 mb-3'>Sunday May 20th</h4>
+  <p class='lead'>Current User: <span id="currentUser" style="color:red">Biff Tannen</span></p>
+  <select id="selectStatus" class="custom-select" id="inputGroupSelect02" style="">
+    <option value="maybe">MAYBE</option>
+    <option value="going">GOING</option>
+    <option value="notGoing">NOT GOING</option>
+  </select>
+</div><!-- /EVENT DETAILS -->
+
+  <div class="card-deck m-2"> <!-- GUESTS, ITEMS, BRINGERS -->
+    <div class="card"> <!-- GUEST LIST -->
+      <div id="guestList" class="card-body">
+        <h5 class="card-title">Guest List</h5>
+        <ul class="list-group list-scroll"></ul> <!-- guestlist will load here --> 
+      </div>
+      <div class="card-footer bg-white border-white"> <!-- ADD GUEST FORM -->
+        <form>
+            <div class="form-group">
+              <div class="col-md-13">
+                <input id="newGuestName" class="form-control" placeholder="New Guest" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-13">
+                <button id="addNewGuest" type="button" class="btn btn-primary btn-md btn-block info">ADD</button>
+              </div>
+            </div>   
+          </form>  
+      </div><!-- /ADD GUEST FORM -->
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div> <!-- /GUEST LIST -->
+
+    <div class="card"> <!-- ITEM LIST -->
+      <div id="itemList" class="card-body">
+        <h5 class="card-title">Item List</h5>
+        <ul class="list-group list-scroll">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-7">Plutonium</div>
+              <div class="col text-center">
+                <!-- <button type="button" class="btn btn-success">Going</button> -->
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-info">Bring</button>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-7">Delorean</div>
+              <div class="col text-center">
+                <!-- <button type="button" class="btn btn-success">Going</button> -->
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-info">Bring</button>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-7">Hover Board</div>
+              <div class="col text-center">
+                <!-- <button type="button" class="btn btn-success">Going</button> -->
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-info">Bring</button>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-7">Sports Almanac (1950 - 2000)</div>
+              <div class="col text-center">
+                <!-- <button type="button" class="btn btn-success">Going</button> -->
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-info">Bring</button>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-7">BBQ And Peanut Brittle</div>
+              <div class="col text-center">
+                <!-- <button type="button" class="btn btn-success">Going</button> -->
+              </div>
+              <div class="col text-center">
+                <button type="button" class="btn btn-info">Bring</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="card-footer bg-white border-white"> <!-- ADD ITEM FORM -->
+        <form>
+            <div class="form-group">
+              <div class="col-md-13">
+                <input id="newItem" class="form-control" placeholder="Item Needed" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-13">
+                <button id="addNewItem" type="button" class="btn btn-primary btn-md btn-block info">ADD</button>
+              </div>
+            </div>   
+          </form>  
+      </div><!-- /ADD ITEM FORM -->
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div> <!-- /ITEM LIST -->
+    <div class="card"> <!-- BRINGERS -->
+      <div id="bringersList" class="card-body">
+        <h5 class="card-title">Bringers</h5>
+        <ul class="list-group list-scroll">
+          <li class="list-group-item"><b>Marty McFly</b> is bringing: <i>Pepsi - Tortilla Chips - Salsa</i></li>
+          <li class="list-group-item"><b>Doc Brown</b> is bringing: <i>The Libyans - Popcorn - Beer</i></li>
+        </ul>
+      </div>
+      <div class="card-footer bg-white border-white"> <!-- BRINGING FORM -->
+        <form>
+            <div class="form-group">
+              <div class="col-md-13">
+                <input id="newItemToBring" class="form-control" placeholder="Item Bringing" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-13">
+                <button id="bringItem" type="button" class="btn btn-primary btn-md btn-block info">BRING</button>
+              </div>
+            </div>   
+          </form>  
+      </div><!-- /BRINGING FORM -->
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div> <!-- /BRINGERS -->
+  </div> <!-- /GUESTS, ITEMS, BRINGERS -->
+
+  <footer style="background-color: lightblue" class="footer mt-5 text-center">
+      <div class="container">
+        <span class="text-muted">&copy; The Creators</span>
+      </div>
+    </footer>
+
+</body>
+</html>
